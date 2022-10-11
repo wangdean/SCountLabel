@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 extension UILabel {
-    func count(to: String, interval: TimeInterval = 0.2, format: [String]? = nil) {
+    public func count(to: String, interval: TimeInterval = 0.2, format: [String]? = nil) {
         count(from: text ?? to, to: to, interval: interval, format: format)
     }
     
-    func count(from: String, to: String, interval: TimeInterval = 0.05, format: [String]? = nil) {
+    public func count(from: String, to: String, interval: TimeInterval = 0.05, format: [String]? = nil) {
         struct Counter {
             static var timer: NSMapTable<UILabel,Timer> = NSMapTable(keyOptions: NSPointerFunctions.Options.weakMemory, valueOptions: NSPointerFunctions.Options.strongMemory)
             static func numbers(_ text: String) -> [String] {
